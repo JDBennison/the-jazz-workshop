@@ -24,23 +24,23 @@ a {
 }
 
 .jumbotron {
-    background: url(/assets/images/jazz-workshop-main.png) no-repeat center;
+    background: url("/assets/images/jazz-workshop-main.png") no-repeat center;
     background-size: cover;
     height: 80vh;
 }
 
 
 .image-1:before {
-    background: url(/assets/images/guitar-icon.png) no-repeat center;
+    background: url("/assets/images/guitar-icon.png") no-repeat center;
 }
 .image-2:before {
-    background: url(/assets/images/drum-icon.png) no-repeat center;
+    background: url("/assets/images/drum-icon.png") no-repeat center;
 }
 .image-3:before {
-    background: url(/assets/images/trumpet-icon.png) no-repeat center;
+    background: url("/assets/images/trumpet-icon.png") no-repeat center;
 }
 .image-4:before {
-    background: url(/assets/images/piano-icon.png) no-repeat center;
+    background: url("/assets/images/piano-icon.png") no-repeat center;
 }
 
 .slide-image {
