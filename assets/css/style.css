@@ -23,6 +23,12 @@ a {
     width: 100%;
 }
 
+.jumbotron {
+    background: url(/assets/images/jazz-workshop-main.png) no-repeat center;
+    background-size: cover;
+    height: 80vh;
+}
+
 
 .image-1:before {
     background: url(/assets/images/guitar-icon.png) no-repeat center;
