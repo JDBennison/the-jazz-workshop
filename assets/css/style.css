@@ -24,7 +24,7 @@ a {
 }
 
 .jumbotron {
-    background: url("/assets/images/jazz-workshop-main.png") no-repeat center;
+    background: url("assets/images/jazz-workshop-main.png") no-repeat center;
     background-size: cover;
     height: 80vh;
 }
