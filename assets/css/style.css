@@ -23,12 +23,57 @@ a {
     width: 100%;
 }
 
+
+.image-1:before {
+    background: url(/assets/images/guitar-icon.png) no-repeat center;
+}
+.image-2:before {
+    background: url(/assets/images/drum-icon.png) no-repeat center;
+}
+.image-3:before {
+    background: url(/assets/images/trumpet-icon.png) no-repeat center;
+}
+.image-4:before {
+    background: url(/assets/images/piano-icon.png) no-repeat center;
+}
+
 .slide-image {
-    height: 170px;
     width: 170px;
-    object-fit: cover;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 170px;
     border-radius: 50%;
-    background-color: white;
+}
+
+.slide-image::before {
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /*z-index: -1;*/
+    animation: 10s ease 0s normal none infinite running zoomin;
+    -webkit-animation: 10s ease 0s normal none infinite running zoomin;
+    -o-animation: 10s ease 0s normal none infinite running zoomin;
+    -moz--o-animation: 10s ease 0s normal none infinite running zoomin;
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(1, 1)
+    }
+
+    50% {
+        transform: scale(1.2, 1.2)
+    }
+
+    100% {
+        transform: scale(1, 1)
+    }
 }
 
 .testimonial {
@@ -47,6 +92,10 @@ a {
     row-gap: 30px;
     height: 100%;
     width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border-color: #272727;
 }
 
 .slide p {
