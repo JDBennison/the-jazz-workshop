@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jazz Workshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/39f437f428.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <meta name="description"
+        content="A jazz education programme offering practical workshops and jazz theory courses in Brighton. Our ethos pairs an empathetic learning environment with a methodical approach to understanding jazz as a genre.">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/jazz-logo-white.png" alt="The Jazz Workshop" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-3">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="get-involved.html">Get Involved</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center py-5">
+                <h1>Contact</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 py-5">
+                <p>To contact The Jazz Workshop regarding anything other than workshops and courses, please use this form.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pb-5">
+                <form>
+                    <div class="row mb-3">
+                        <label for="FullName" class="col-sm-3 col-form-label">Full Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="FullName" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Email" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Your Email"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Subject" class="col-sm-3 col-form-label">Subject</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="Subject" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Message" class="col-sm-3 col-form-label">Message</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="Message" rows="3" placeholder="Message"
+                                required></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-outline-dark ">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row py-3">
+            <div class="col-12 col-md-6">
+                <a href="https://www.facebook.com/thejazzworkshopbrighton/" target="_blank"
+                    class="link-light social-icon px-5">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/jazz_workshop_brighton/" target="_blank"
+                    class="link-light social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 text-end px-5">
+                <form action="">
+                    <div class="row g-4">
+                        <div class="col-3">
+                            <label for="FooterEmail" class="col-form-label text-light">Subscribe</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="email" class="form-control" id="FooterEmail"
+                                placeholder="Enter your Email Address">
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" class="btn btn-outline-light">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
