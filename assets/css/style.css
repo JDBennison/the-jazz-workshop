@@ -172,7 +172,7 @@ a {
 
 .carousel-inner {
     height: 0;
-    padding-bottom: 25%;
+    padding-bottom: 50%;
     /* this sets carousel aspect ratio (4:1 here) */
 }
 
