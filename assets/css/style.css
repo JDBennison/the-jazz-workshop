@@ -6,6 +6,9 @@ body {
     color: #272727;
 }
 
+.bg-grey {
+    background: #272727;
+}
 
 footer {
     background: #272727;
@@ -33,104 +36,23 @@ a {
     width: 100%;
 }
 
-.image-1:before {
-    background: url("../images/guitar-icon.png") no-repeat center;
-}
-.image-2:before {
-    background: url("../images/drum-icon.png") no-repeat center;
-}
-.image-3:before {
-    background: url("../images/trumpet-icon.png") no-repeat center;
-}
-.image-4:before {
-    background: url("../images/piano-icon.png") no-repeat center;
+.carousel-inner .active .col-md-4:nth-of-type(2){
+    animation: zoom-in-zoom-out 1s ease;
+    animation-fill-mode: forwards;
+    z-index: 1;
 }
 
-.slide-image {
-    width: 170px;
-    float: left;
-    position: relative;
-    overflow: hidden;
-    height: 170px;
-    border-radius: 50%;
-}
-
-.slide-image::before {
-    background-size: contain;
-    content: "";
-    display: inline-block;
-    height: 100%;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    /*z-index: -1;*/
-    animation: 10s ease 0s normal none infinite running zoomin;
-    -webkit-animation: 10s ease 0s normal none infinite running zoomin;
-    -o-animation: 10s ease 0s normal none infinite running zoomin;
-    -moz--o-animation: 10s ease 0s normal none infinite running zoomin;
-}
-
-@keyframes zoomin {
+@keyframes zoom-in-zoom-out {
     0% {
-        transform: scale(1, 1)
+        transform: scale(1);
     }
-
-    50% {
-        transform: scale(1.2, 1.2)
-    }
-
     100% {
-        transform: scale(1, 1)
+        transform: scale(1.2);
     }
 }
 
-.testimonial {
-    position: relative;
-    max-width: 900px;
-    width: 100%;
-    padding: 10px 0 40px 0;
-    overflow: hidden;
-}
-
-.testimonial .slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 30px;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    border-color: #272727;
-}
-
-.slide p {
-    text-align: center;
-    padding: 0 160px;
-}
-
-.slide .quote-icon {
-    font-size: 50px;
-    color: #dddddd;
-}
-
-.slide .details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.details .name {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.details .job {
-    font-size: 12px;
-    font-weight: 400;
+.carousel-inner {
+    overflow: visible;
 }
 
 /* swiper button css */
