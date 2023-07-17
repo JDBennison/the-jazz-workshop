@@ -176,7 +176,7 @@ a {
 .carousel-inner {
     height: 0;
     padding-bottom: 50%;
-    /* this sets carousel aspect ratio (4:1 here) */
+    /* this sets carousel aspect ratio (4:1 here)  */
 }
 
 .carousel-item {
@@ -186,11 +186,46 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-}
+} 
 
 .carousel-item img {
     height: 100%;
     /* Bootstrap handles width already */
     object-fit: cover;
-    /* or 'contain' if you want stretch instead of crop */
+   /* or 'contain' if you want stretch instead of crop  */
+} 
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
 }

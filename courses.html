@@ -13,7 +13,6 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/39f437f428.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <link href="css/slider.css" rel="stylesheet" type="text/css">
     <meta name="description"
         content="A jazz education programme offering practical workshops and jazz theory courses in Brighton. Our ethos pairs an empathetic learning environment with a methodical approach to understanding jazz as a genre.">
 </head>
@@ -120,25 +119,67 @@
         <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/images/carousel/carousel-1.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-1.jpg" alt="course image 1" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/carousel/carousel-2.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-2.jpg" alt="course image 2" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/carousel/carousel-3.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-3.jpg" alt="course image 3" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/carousel/carousel-4.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-4.png" alt="course image 4" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/carousel/carousel-5.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-5.png" alt="course image 5" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/carousel/carousel-6.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-6.jpg" alt="course image 6" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/carousel/carousel-7.jpg" class="d-block w-100" alt="course image 1">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/images/carousel/carousel-7.jpg" alt="course image 7" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel"
@@ -252,7 +293,24 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
 
+            items.forEach((el) => {
+                const minPerSlide = 3
+                let next = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    if (!next) {
+                        // wrap carousel by using first child
+                        next = items[0]
+                    }
+                    let cloneChild = next.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next.nextElementSibling
+                }
+            })
+
+    </script>
 </body>
 
 </html>
