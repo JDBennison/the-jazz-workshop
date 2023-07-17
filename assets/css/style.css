@@ -173,27 +173,6 @@ a {
 
 /* Courses */
 
-.carousel-inner {
-    height: 0;
-    padding-bottom: 50%;
-    /* this sets carousel aspect ratio (4:1 here)  */
-}
-
-.carousel-item {
-    position: absolute !important;
-    /* Bootstrap is insistent */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-} 
-
-.carousel-item img {
-    height: 100%;
-    /* Bootstrap handles width already */
-    object-fit: cover;
-   /* or 'contain' if you want stretch instead of crop  */
-} 
 
 @media (max-width: 767px) {
     .carousel-inner .carousel-item>div {
@@ -216,12 +195,12 @@ a {
 
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
+        transform: translateX(33.3%);
     }
 
     .carousel-inner .carousel-item-start.active,
     .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
+        transform: translateX(-33.3%);
     }
 }
 
