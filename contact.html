@@ -13,13 +13,23 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/39f437f428.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        footer {
+            margin-top: auto;
+        }
+    </style>
     <meta name="description"
         content="A jazz education programme offering practical workshops and jazz theory courses in Brighton. Our ethos pairs an empathetic learning environment with a methodical approach to understanding jazz as a genre.">
 </head>
 
 <body>
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg bg-teal" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/images/jazz-logo-white.png" alt="The Jazz Workshop" width="100">
@@ -64,15 +74,15 @@
             <div class="col-12 pb-5">
                 <form>
                     <div class="row mb-3">
-                        <label for="FullName" class="col-sm-3 col-form-label">Full Name</label>
+                        <label for="FullName" class="col-sm-3 col-form-label">Full name</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="FullName" placeholder="Your Name" required>
+                            <input type="text" class="form-control" id="FullName" placeholder="Your name" required>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label for="Email" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Your Email"
+                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Your email"
                                 required>
                         </div>
                     </div>
@@ -90,25 +100,24 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-outline-dark ">Submit</button>
+                    <button type="submit" class="btn btn-teal ">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <footer class="container-fluid">
-        <div class="row py-3">
-            <div class="col-12 col-md-6">
+    <footer class="container-fluid bg-black">
+        <div class="row py-3 text-center text-md-start">
+            <div class="col-12 col-md-6 pb-3 pb-md-0">
                 <a href="https://www.facebook.com/thejazzworkshopbrighton/" target="_blank"
                     class="link-light social-icon px-5">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/jazz_workshop_brighton/" target="_blank"
-                    class="link-light social-icon">
+                <a href="https://www.instagram.com/jazz_workshop_brighton/" target="_blank" class="link-light social-icon">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-            <div class="col-12 col-md-6 text-end px-5">
+            <div class="col-12 col-md-6 text-md-end ">
                 <form action="">
                     <div class="row g-4">
                         <div class="col-3">
@@ -118,7 +127,7 @@
                             <input type="email" class="form-control" id="FooterEmail"
                                 placeholder="Enter your Email Address">
                         </div>
-                        <div class="col-2">
+                        <div class="col-3 text-start">
                             <button type="submit" class="btn btn-outline-light">Submit</button>
                         </div>
                     </div>
