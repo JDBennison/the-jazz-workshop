@@ -12,6 +12,14 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/39f437f428.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('TOl5EGIJFpCwXp36a');
+        })();
+    </script>
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <style>
         body {
@@ -72,35 +80,35 @@
         </div>
         <div class="row">
             <div class="col-12 pb-5">
-                <form>
+                <form id="contact_form" onsubmit="return sendMail(this);">
                     <div class="row mb-3">
-                        <label for="FullName" class="col-sm-3 col-form-label">Full name</label>
+                        <label for="full_name" class="col-sm-3 col-form-label">Full name</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="FullName" placeholder="Your name" required>
+                            <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Your name" required>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="Email" class="col-sm-3 col-form-label">Email</label>
+                        <label for="email" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Your email"
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Your email"
                                 required>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="Subject" class="col-sm-3 col-form-label">Subject</label>
+                        <label for="subject" class="col-sm-3 col-form-label">Subject</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="Subject" placeholder="Subject" required>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="Message" class="col-sm-3 col-form-label">Message</label>
+                        <label for="message" class="col-sm-3 col-form-label">Message</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" id="Message" rows="3" placeholder="Message"
+                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Message"
                                 required></textarea>
                         </div>
                     </div>
-                    
-                    <button type="submit" class="btn btn-teal ">Submit</button>
+                     <div class="g-recaptcha py-3" data-sitekey="6LfNzj0nAAAAAFR6NqLb8x1vkSnHmy8fljcCN4Nq"></div>
+                    <button type="submit" class="btn btn-teal">Submit</button>
                 </form>
             </div>
         </div>
@@ -137,7 +145,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
