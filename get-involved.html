@@ -12,6 +12,13 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/39f437f428.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('TOl5EGIJFpCwXp36a');
+        })();
+    </script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="description"
         content="A jazz education programme offering practical workshops and jazz theory courses in Brighton. Our ethos pairs an empathetic learning environment with a methodical approach to understanding jazz as a genre.">
@@ -92,56 +99,56 @@
         </div>
         <div class="row">
             <div class="col-12 py-5">
-                <form>
+                <form id="get_involved" onsubmit="return sendMail(this);">
                     <div class="row mb-3">
-                        <label for="Email" class="col-sm-3 col-form-label">Email</label>
+                        <label for="email" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Your email" required>
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Your email" required>
                             <!-- <div id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</div> -->
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="FullName" class="col-sm-3 col-form-label">Full name</label>
+                        <label for="full_name" class="col-sm-3 col-form-label">Full name</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="FullName" placeholder="Your name" required>
+                            <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Your name" required>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="Phone" class="col-sm-3 col-form-label">Phone number</label>
+                        <label for="phone" class="col-sm-3 col-form-label">Phone number</label>
                         <div class="col-sm-9">
-                            <input type="number" class="form-control" id="Phone" placeholder="Your phone number" required>
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Your phone number" required>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="Instrument" class="col-sm-3 col-form-label">What instrument do you play?</label>
+                        <label for="instrument" class="col-sm-3 col-form-label">What instrument do you play?</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="Instrument" placeholder="Instrument" required>
+                            <input type="text" class="form-control" id="instrument" name="instrument" placeholder="Instrument" required>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="Ability" class="col-sm-3 col-form-label">How would you describe your general instrumental skills (Taken any grades? Played in bands already?)</label>
+                        <label for="ability" class="col-sm-3 col-form-label">How would you describe your general instrumental skills (Taken any grades? Played in bands already?)</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" id="Ability" rows="3" placeholder="Your answer" required></textarea>
+                            <textarea class="form-control" id="ability" name="ability" rows="3" placeholder="Your answer" required></textarea>
                         </div>
                     </div>
                     <div class="row mb-5">
-                        <label for="Improvisation" class="col-sm-3 col-form-label">Have you played jazz before or done any improvisation?</label>
+                        <label for="improvisation" class="col-sm-3 col-form-label">Have you played jazz before or done any improvisation?</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="Improvisation" placeholder="Your answer" required>
+                            <input type="text" class="form-control" id="improvisation" name="improvisation" placeholder="Your answer" required>
                         </div>
                     </div>
                     <fieldset class="row mb-5">
                         <legend class="col-form-label col-sm-3 pt-0">Tell us what sort of sessions you are interested in</legend>
                         <div class="col-sm-9">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Sessions" id="Workshop" value="option1" required>
-                                <label class="form-check-label" for="Workshop">
+                                <input class="form-check-input" type="checkbox" name="workshop" id="workshop" value="Workshop">
+                                <label class="form-check-label" for="workshop">
                                     Workshop ensemble (includes repertoire and improv)
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Sessions" id="Theory" value="option2" required>
-                                <label class="form-check-label" for="Theory">
+                                <input class="form-check-input" type="checkbox" name="theory" id="theory" value="Theory">
+                                <label class="form-check-label" for="theory">
                                     Jazz theory 101 Crash Course
                                 </label>
                             </div>
@@ -151,42 +158,42 @@
                         <legend class="col-form-label col-sm-3 pt-0">Workshop ensembles occur after working hours during the week. Please tick the days that work for you.</legend>
                         <div class="col-sm-9">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Availability" id="Monday" value="option1" required>
-                                <label class="form-check-label" for="Monday">
+                                <input class="form-check-input" type="checkbox" name="monday" id="monday" value="Monday">
+                                <label class="form-check-label" for="monday">
                                     Monday
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Availability" id="Tuesday" value="option2" required>
-                                <label class="form-check-label" for="Tuesday">
+                                <input class="form-check-input" type="checkbox" name="tuesday" id="tuesday" value="Tuesday">
+                                <label class="form-check-label" for="tuesday">
                                     Tuesday
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Availability" id="Wednesday" value="option3" required>
-                                <label class="form-check-label" for="Wednesday">
+                                <input class="form-check-input" type="checkbox" name="wednesday" id="wednesday" value="Wednesday">
+                                <label class="form-check-label" for="wednesday">
                                     Wednesday
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Availability" id="Thursday" value="option4" required>
-                                <label class="form-check-label" for="Thursday">
+                                <input class="form-check-input" type="checkbox" name="thursday" id="thursday" value="Thursday">
+                                <label class="form-check-label" for="thursday">
                                     Thursday
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Availability" id="Friday" value="option2" required>
-                                <label class="form-check-label" for="Friday">
+                                <input class="form-check-input" type="checkbox" name="friday" id="friday" value="Friday">
+                                <label class="form-check-label" for="friday">
                                     Friday
                                 </label>
                             </div>
                         </div>
                     </fieldset>
                     <div class="row mb-5">
-                        <label for="Message" class="col-sm-3 col-form-label">Thank you for registering your interest! We'll be in touch as soon as possible. Is there anything else you'd like to
+                        <label for="message" class="col-sm-3 col-form-label">Thank you for registering your interest! We'll be in touch as soon as possible. Is there anything else you'd like to
                         tell us?</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" id="Message" rows="3" placeholder="Your message"></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message"></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-teal">Submit</button>
@@ -226,7 +233,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/involvedForm.js"></script>
 </body>
 
 </html>
