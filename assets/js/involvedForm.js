@@ -1,4 +1,15 @@
 function sendMail(contactForm) {
+  function SubForm() {
+    $.ajax({
+      url: "https://api.apispreadsheets.com/data/g6HrRoKUN7gYOJ4R/",
+      type: "post",
+      data: $("#get_involved").serializeArray(),
+      success: function () {},
+      error: function () {
+        alert("There was an error :(");
+      },
+    });
+  }
   var workshopCheck = document.getElementById("workshop");
   var theoryCheck = document.getElementById("theory");
   var mondayCheck = document.getElementById("monday");
@@ -62,6 +73,7 @@ function sendMail(contactForm) {
     .then(
       function (response) {
         console.log("SUCCESS", response);
+        SubForm();
         alert(
           "Your messsage has been sent! Someone will be in touch very soon"
         );

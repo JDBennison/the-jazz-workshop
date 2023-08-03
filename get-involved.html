@@ -18,19 +18,7 @@
         (function () {
             emailjs.init('TOl5EGIJFpCwXp36a');
         })();
-         function SubForm(){
-                $.ajax({
-                    url: "https://api.apispreadsheets.com/data/g6HrRoKUN7gYOJ4R/",
-                    type: "post",
-                    data: $("#get_involved").serializeArray(),
-                    success: function () {
-                        return sendMail(this);
-                    },
-                    error: function () {
-                        alert("There was an error :(")
-                    }
-                });
-            }
+         
     </script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="description"
@@ -112,7 +100,7 @@
         </div>
         <div class="row">
             <div class="col-12 py-5">
-                <form id="get_involved">
+                <form id="get_involved" onsubmit="return sendMail(this);">
                     <div class="row mb-3">
                         <label for="email" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
@@ -210,7 +198,7 @@
                         </div>
                     </div>
                     <div class="g-recaptcha py-3" data-sitekey="6LfNzj0nAAAAAFR6NqLb8x1vkSnHmy8fljcCN4Nq"></div>
-                    <button type="submit" class="btn btn-teal" onclick='SubForm()'>Submit</button>
+                    <button type="submit" class="btn btn-teal">Submit</button>
                 </form>
             </div>
         </div>
