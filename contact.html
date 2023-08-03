@@ -19,7 +19,7 @@
             emailjs.init('TOl5EGIJFpCwXp36a');
         })();
     </script>
-
+    <script src="assets/js/subscribe.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <style>
         body {
@@ -126,17 +126,17 @@
                 </a>
             </div>
             <div class="col-12 col-md-6 text-md-end ">
-                <form action="">
+                <form id="subscribe">
                     <div class="row g-4">
                         <div class="col-3">
                             <label for="FooterEmail" class="col-form-label text-light">Subscribe</label>
                         </div>
                         <div class="col-6">
-                            <input type="email" class="form-control" id="FooterEmail"
-                                placeholder="Enter your Email Address">
+                            <input type="email" name="email" class="form-control" id="FooterEmail"
+                                placeholder="Enter your Email Address" required>
                         </div>
                         <div class="col-3 text-start">
-                            <button type="submit" class="btn btn-outline-light">Submit</button>
+                            <button type="submit" class="btn btn-outline-light" onclick='SubscribeForm()'>Submit</button>
                         </div>
                     </div>
                 </form>
@@ -146,6 +146,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="assets/js/sendEmail.js"></script>
+    
 </body>
 
 </html>

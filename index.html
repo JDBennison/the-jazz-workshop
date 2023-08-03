@@ -12,6 +12,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/39f437f428.js" crossorigin="anonymous"></script>
+    <script src="assets/js/subscribe.js"></script>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="description"
@@ -230,7 +231,8 @@
     <footer class="container-fluid bg-black">
         <div class="row py-3 text-center text-md-start">
             <div class="col-12 col-md-6 pb-3 pb-md-0">
-                <a href="https://www.facebook.com/thejazzworkshopbrighton/" target="_blank" class="link-light social-icon px-5">
+                <a href="https://www.facebook.com/thejazzworkshopbrighton/" target="_blank"
+                    class="link-light social-icon px-5">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
                 <a href="https://www.instagram.com/jazz_workshop_brighton/" target="_blank" class="link-light social-icon">
@@ -238,16 +240,17 @@
                 </a>
             </div>
             <div class="col-12 col-md-6 text-md-end ">
-                <form action="">
+                <form id="subscribe">
                     <div class="row g-4">
                         <div class="col-3">
                             <label for="FooterEmail" class="col-form-label text-light">Subscribe</label>
                         </div>
                         <div class="col-6">
-                            <input type="email" class="form-control" id="FooterEmail" placeholder="Enter your Email Address">
+                            <input type="email" name="email" class="form-control" id="FooterEmail"
+                                placeholder="Enter your Email Address" required>
                         </div>
                         <div class="col-3 text-start">
-                            <button type="submit" class="btn btn-outline-light">Submit</button>
+                            <button type="submit" class="btn btn-outline-light" onclick='SubscribeForm()'>Submit</button>
                         </div>
                     </div>
                 </form>
@@ -257,7 +260,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
     <script>
         let items = document.querySelectorAll('.carousel .carousel-item')
 
