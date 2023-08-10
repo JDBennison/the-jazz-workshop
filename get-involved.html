@@ -209,9 +209,9 @@
                         tell us?</label>
                         <div class="col-sm-9">
                             <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message"></textarea>
-                            <input type="hidden" name="submitdate" id="submitdate" value="">
                         </div>
                     </div>
+                    <input type="hidden" name="submitdate" id="submitdate" value="">
                     <div class="g-recaptcha py-3" data-sitekey="6LfNzj0nAAAAAFR6NqLb8x1vkSnHmy8fljcCN4Nq"></div>
                     <button type="submit" class="btn btn-teal">Submit</button>
                 </form>
@@ -254,7 +254,7 @@
     <script src="assets/js/subscribe.js"></script>
     <script>
         const today = new Date();
-        const formattedDate = today.toISOString().substring(0, 10);
+        const formattedDate = today.toISOString().substring(0, 16);
         document.getElementById('submitdate').value = formattedDate;
     </script>
 
