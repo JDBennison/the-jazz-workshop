@@ -68,7 +68,7 @@ function sendMail(contactForm) {
       friday: friday,
       ability: contactForm.ability.value,
       improvisation: contactForm.improvisation.value,
-      submitdate: contactForm.submitdate.value,
+      // submitdate: contactForm.submitdate.value,
       //   "g-recaptcha-response": grecaptcha.getResponse(),
     })
     .then(
