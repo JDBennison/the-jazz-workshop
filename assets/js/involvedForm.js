@@ -10,6 +10,9 @@ function sendMail(contactForm) {
       },
     });
   }
+  var today = new Date();
+  var formattedDate = today.toISOString().substring(0, 10);
+
   var workshopCheck = document.getElementById("workshop");
   var theoryCheck = document.getElementById("theory");
   var mondayCheck = document.getElementById("monday");
@@ -68,7 +71,7 @@ function sendMail(contactForm) {
       friday: friday,
       ability: contactForm.ability.value,
       improvisation: contactForm.improvisation.value,
-      // submitdate: contactForm.submitdate.value,
+      submitdate: formattedDate,
       //   "g-recaptcha-response": grecaptcha.getResponse(),
     })
     .then(

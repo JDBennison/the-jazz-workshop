@@ -209,7 +209,6 @@
                         tell us?</label>
                         <div class="col-sm-9">
                             <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message"></textarea>
-                            <input type="hidden" name="submitdate" id="submitdate">
                         </div>
                     </div>
                     <div class="g-recaptcha py-3" data-sitekey="6LfNzj0nAAAAAFR6NqLb8x1vkSnHmy8fljcCN4Nq"></div>
@@ -252,11 +251,7 @@
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="assets/js/involvedForm.js"></script>
     <script src="assets/js/subscribe.js"></script>
-    <script>
-        const today = new Date();
-        const formattedDate = today.toISOString().substring(0, 10);
-        document.getElementById('submitdate').value = formattedDate;
-    </script>
+    
 
 </body>
 
