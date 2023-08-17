@@ -21,12 +21,11 @@
 .slick-list
 {
     position: relative;
-
-    display: block;
     overflow: hidden;
+    display: block;
 
     margin: 0;
-    padding: 0;
+
 }
 .slick-list:focus
 {
