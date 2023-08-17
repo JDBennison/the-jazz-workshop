@@ -28,6 +28,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
     <meta name="description"
         content="A jazz education programme offering practical workshops and jazz theory courses in Brighton. Our ethos pairs an empathetic learning environment with a methodical approach to understanding jazz as a genre.">
     <meta property="og:image"
@@ -102,167 +104,136 @@
             </div>
         </div>
     </div>
-    <section class="container-fluid py-5 bg-grey">
-        <div class="row py-5">
-            <div id="courseCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="col-md-4">
-                            <div class="card mx-2">
-                                <div class="row g-0">
-                                    <div class="d-none d-sm-block col-sm-4">
-                                        <img src="./assets/images/guitar-icon.png" class="img-fluid rounded-start" alt="guitar">
-                                    </div>
-                                    <div class="col-12 col-sm-8">
-                                        <div class="card-body">
-                                            <p class="card-text">Arabella is a diligent and motivated teacher. Her deep love of jazz, and her exhaustive knowledge of
-                                            its forms, is evident in her inspiring workshops.
-                                            </p>
-                                            <p class="card-text my-0"><small class="text-body-secondary">John Keenan</small></p>
-                                            <p class="card-text"><small class="text-body-secondary">Guitar</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-sm-none col-4 offset-4">
-                                        <img src="./assets/images/guitar-icon.png" class="img-fluid rounded-start" alt="guitar">
-                                    </div>
-                                </div>
-                            </div>
+    <section class="py-5 bg-grey">
+        <div class="courseCarousel">
+            <div class="card mx-2">
+                <div class="row g-0">
+                    <div class="d-none d-sm-block col-sm-4">
+                        <img src="./assets/images/guitar-icon.png" class="img-fluid rounded-start" alt="guitar">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="card-body">
+                            <p class="card-text">Arabella is a diligent and motivated teacher. Her deep love of jazz, and her
+                                exhaustive knowledge of
+                                its forms, is evident in her inspiring workshops.
+                            </p>
+                            <p class="card-text my-0"><small class="text-body-secondary">John Keenan</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Guitar</small></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card mx-2">
-                                <div class="row g-0">
-                                    <div class="d-none d-sm-block col-sm-4">
-                                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
-                                    </div>
-                                    <div class="col-12 col-sm-8">
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                                Arabella's workshop is a lot of fun and a great way to learn jazz. We get lots of practical
-                                                advice and then put it into
-                                                practice. Perfect!
-                                            </p>
-                                            <p class="card-text my-0"><small class="text-body-secondary">Rie</small></p>
-                                            <p class="card-text"><small class="text-body-secondary">Piano</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-sm-none col-4 offset-4">
-                                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card mx-2">
-                                <div class="row g-0">
-                                    <div class="d-none d-sm-block col-sm-4">
-                                        <img src="./assets/images/drum-icon.png" class="img-fluid rounded" alt="drum">
-                                    </div>
-                                    <div class="col-12 col-sm-8">
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                                Being in the Jazz workshop has been fantastic. Arabella facilitates the group really well. As a drummer I was worried
-                                                that I wouldn’t benefit from being in the group, but it’s been great for my playing. Great tunes. Great players. New
-                                                jazzy friends. What more could I ask for. Under The Bridge is a lovely friendly space too.
-                                            </p>
-                                            <p class="card-text my-0"><small class="text-body-secondary">Danny Annaly</small></p>
-                                            <p class="card-text"><small class="text-body-secondary">Drums</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-sm-none col-4 offset-4">
-                                        <img src="./assets/images/drum-icon.png" class="img-fluid rounded" alt="drum">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card mx-2">
-                                <div class="row g-0">
-                                    <div class="d-none d-sm-block col-sm-4">
-                                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
-                                    </div>
-                                    <div class="col-12 col-sm-8">
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                                This is my third term learning jazz with Arabella. Learning to play jazz in a small group
-                                                with a teacher has been
-                                                brilliant. Arabella is an extremely experienced teacher who is both patient and encouraging.
-                                                It's also been fun to meet
-                                                and play with other instrumentalists.
-                                            </p>
-                                            <p class="card-text my-0"><small class="text-body-secondary">Mike</small></p>
-                                            <p class="card-text"><small class="text-body-secondary">Piano</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-sm-none col-4 offset-4">
-                                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card mx-2">
-                                <div class="row g-0">
-                                    <div class="d-none d-sm-block col-sm-4">
-                                        <img src="./assets/images/trumpet-icon.png" class="img-fluid rounded-start" alt="trumpet">
-                                    </div>
-                                    <div class="col-12 col-sm-8">
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                                Arabella is a phenomenally talented saxophonist and this translates over into her teaching. She broke down so many of
-                                                the basic principles of improvisation (practice your arpeggios!) so much more clearly than any other jazz workshop I'd
-                                                ever attended before. Fully recommend!
-                                            </p>
-                                            <p class="card-text my-0"><small class="text-body-secondary">Dave</small></p>
-                                            <p class="card-text"><small class="text-body-secondary">Trumpet</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-sm-none col-4 offset-4">
-                                        <img src="./assets/images/trumpet-icon.png" class="img-fluid rounded-start" alt="trumpet">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card mx-2">
-                                <div class="row g-0">
-                                    <div class="d-none d-sm-block col-sm-4">
-                                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
-                                    </div>
-                                    <div class="col-12 col-sm-8">
-                                        <div class="card-body">
-                                            <p class="card-text">
-                                                Enthusiastic, knowledgeable and a well organised tutor.
-                                            </p>
-                                            <p class="card-text my-0"><small class="text-body-secondary">Sophie</small></p>
-                                            <p class="card-text"><small class="text-body-secondary">Piano</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-sm-none col-4 offset-4">
-                                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-block d-sm-none col-4 offset-4">
+                        <img src="./assets/images/guitar-icon.png" class="img-fluid rounded-start" alt="guitar">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            </div>
+            <div class="card mx-2">
+                <div class="row g-0">
+                    <div class="d-none d-sm-block col-sm-4">
+                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Arabella's workshop is a lot of fun and a great way to learn jazz. We get lots of practical
+                                advice and then put it into
+                                practice. Perfect!
+                            </p>
+                            <p class="card-text my-0"><small class="text-body-secondary">Rie</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Piano</small></p>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none col-4 offset-4">
+                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
+                    </div>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <div class="row g-0">
+                    <div class="d-none d-sm-block col-sm-4">
+                        <img src="./assets/images/drum-icon.png" class="img-fluid rounded" alt="drum">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Being in the Jazz workshop has been fantastic. Arabella facilitates the group really well. As a
+                                drummer I was worried
+                                that I wouldn’t benefit from being in the group, but it’s been great for my playing. Great tunes.
+                                Great players. New
+                                jazzy friends. What more could I ask for. Under The Bridge is a lovely friendly space too.
+                            </p>
+                            <p class="card-text my-0"><small class="text-body-secondary">Danny Annaly</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Drums</small></p>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none col-4 offset-4">
+                        <img src="./assets/images/drum-icon.png" class="img-fluid rounded" alt="drum">
+                    </div>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <div class="row g-0">
+                    <div class="d-none d-sm-block col-sm-4">
+                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="card-body">
+                            <p class="card-text">
+                                This is my third term learning jazz with Arabella. Learning to play jazz in a small group
+                                with a teacher has been
+                                brilliant. Arabella is an extremely experienced teacher who is both patient and encouraging.
+                                It's also been fun to meet
+                                and play with other instrumentalists.
+                            </p>
+                            <p class="card-text my-0"><small class="text-body-secondary">Mike</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Piano</small></p>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none col-4 offset-4">
+                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
+                    </div>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <div class="row g-0">
+                    <div class="d-none d-sm-block col-sm-4">
+                        <img src="./assets/images/trumpet-icon.png" class="img-fluid rounded-start" alt="trumpet">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Arabella is a phenomenally talented saxophonist and this translates over into her teaching. She
+                                broke down so many of
+                                the basic principles of improvisation (practice your arpeggios!) so much more clearly than any other
+                                jazz workshop I'd
+                                ever attended before. Fully recommend!
+                            </p>
+                            <p class="card-text my-0"><small class="text-body-secondary">Dave</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Trumpet</small></p>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none col-4 offset-4">
+                        <img src="./assets/images/trumpet-icon.png" class="img-fluid rounded-start" alt="trumpet">
+                    </div>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <div class="row g-0">
+                    <div class="d-none d-sm-block col-sm-4">
+                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Enthusiastic, knowledgeable and a well organised tutor.
+                            </p>
+                            <p class="card-text my-0"><small class="text-body-secondary">Sophie</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Piano</small></p>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none col-4 offset-4">
+                        <img src="./assets/images/piano-icon.png" class="img-fluid rounded-start" alt="piano">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -297,24 +268,30 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
     <script>
-        let items = document.querySelectorAll('.carousel .carousel-item')
-
-        items.forEach((el) => {
-            const minPerSlide = 3
-            let next = el.nextElementSibling
-            for (var i = 1; i < minPerSlide; i++) {
-                if (!next) {
-                    // wrap carousel by using first child
-                    next = items[0]
-                }
-                let cloneChild = next.cloneNode(true)
-                el.appendChild(cloneChild.children[0])
-                next = next.nextElementSibling
-            }
-        })
-
+        $(document).ready(function () {
+            $('.courseCarousel').slick({
+                centerMode: true,
+                infinite: true,
+                arrows: true,
+                speed: 1000,
+                slidesToShow: 3,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    },
+                ]
+            });
+        });
     </script>
 </body>
 </html>
