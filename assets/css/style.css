@@ -253,14 +253,3 @@ a {
     padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
-    .slick-list {
-        padding: 20px 50px !important;
-    }
-    .slick-center {
-        transform: scale(1.1);
-        z-index: 1;
-        transition: all 300ms ease;
-
-    }
-}
