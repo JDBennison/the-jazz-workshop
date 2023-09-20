@@ -1,3 +1,57 @@
+const today = new Date();
+const formattedDate = today.toISOString().substring(0, 16);
+document.getElementById("submitdate").value = formattedDate;
+
+var practicalCheckbox = $("#practical");
+var practicalHidden = $(".practical");
+practicalHidden.hide();
+practicalCheckbox.change(function () {
+  if (practicalCheckbox.is(":checked")) {
+    practicalHidden.show(500);
+    $("#instrument").prop("required", true); //to add required
+    $("#practicalAbility").prop("required", true);
+    $("#practicalImprovisation").prop("required", true);
+    $("#practicalNotes").prop("required", true);
+  } else {
+    practicalHidden.hide(500);
+    $("#instrument").prop("required", false); //to remove required
+    $("#practicalAbility").prop("required", false);
+    $("#practicalImprovisation").prop("required", false);
+    $("#practicalNotes").prop("required", false);
+  }
+});
+
+var vocalCheckbox = $("#vocal");
+var vocalHidden = $(".vocal");
+vocalHidden.hide();
+vocalCheckbox.change(function () {
+  if (vocalCheckbox.is(":checked")) {
+    vocalHidden.show(500);
+    $("#vocalAbility").prop("required", true); //to add required
+    $("#vocalImprovisation").prop("required", true);
+    $("#vocalNotes").prop("required", true);
+  } else {
+    vocalHidden.hide(500);
+    $("#vocalAbility").prop("required", false); //to remove required
+    $("#vocalImprovisation").prop("required", false);
+    $("#vocalNotes").prop("required", false);
+  }
+});
+var theoryCheckbox = $("#theory");
+var theoryHidden = $(".theory");
+theoryHidden.hide();
+theoryCheckbox.change(function () {
+  if (theoryCheckbox.is(":checked")) {
+    theoryHidden.show(500);
+    $("#theoryAbility").prop("required", true); //to add required
+    $("#theoryNotes").prop("required", true);
+  } else {
+    theoryHidden.hide(500);
+    $("#theoryAbility").prop("required", false); //to remove required
+    $("#theoryNotes").prop("required", false);
+  }
+});
+
 function sendMail(contactForm) {
   function SubForm() {
     $.ajax({
@@ -13,48 +67,26 @@ function sendMail(contactForm) {
   var today = new Date();
   var formattedDate = today.toISOString().substring(0, 10);
 
-  var workshopCheck = document.getElementById("workshop");
+  var practicalCheck = document.getElementById("practical");
+  var vocalCheck = document.getElementById("vocal");
   var theoryCheck = document.getElementById("theory");
-  var mondayCheck = document.getElementById("monday");
-  var tuesdayCheck = document.getElementById("tuesday");
-  var wednesdayCheck = document.getElementById("wednesday");
-  var thursdayCheck = document.getElementById("thursday");
-  var fridayCheck = document.getElementById("friday");
-  if (workshopCheck.checked == true) {
-    var workshop = contactForm.workshop.value;
+
+  if (practicalCheck.checked == true) {
+    var practical = contactForm.practical.value;
   } else {
-    var workshop = "";
+    var practical = "";
+  }
+  if (vocalCheck.checked == true) {
+    var vocal = contactForm.vocal.value;
+  } else {
+    var vocal = "";
   }
   if (theoryCheck.checked == true) {
     var theory = contactForm.theory.value;
   } else {
     var theory = "";
   }
-  if (mondayCheck.checked == true) {
-    var monday = contactForm.monday.value;
-  } else {
-    var monday = "";
-  }
-  if (tuesdayCheck.checked == true) {
-    var tuesday = contactForm.tuesday.value;
-  } else {
-    var tuesday = "";
-  }
-  if (wednesdayCheck.checked == true) {
-    var wednesday = contactForm.wednesday.value;
-  } else {
-    var wednesday = "";
-  }
-  if (thursdayCheck.checked == true) {
-    var thursday = contactForm.thursday.value;
-  } else {
-    var thursday = "";
-  }
-  if (fridayCheck.checked == true) {
-    var friday = contactForm.friday.value;
-  } else {
-    var friday = "";
-  }
+
   emailjs
     .send("the-jazz-workshop", "get_involved", {
       full_name: contactForm.full_name.value,
@@ -62,15 +94,18 @@ function sendMail(contactForm) {
       phone: contactForm.phone.value,
       message: contactForm.message.value,
       instrument: contactForm.instrument.value,
-      workshop: workshop,
+      practical: practical,
+      vocal: vocal,
       theory: theory,
-      monday: monday,
-      tuesday: tuesday,
-      wednesday: wednesday,
-      thursday: thursday,
-      friday: friday,
-      ability: contactForm.ability.value,
-      improvisation: contactForm.improvisation.value,
+      practicalAbility: contactForm.practicalAbility.value,
+      vocalAbility: contactForm.ability.value,
+      theoryAbility: contactForm.ability.value,
+      vocalImprovisation: contactForm.improvisation.value,
+      practicalImprovisation: contactForm.improvisation.value,
+      practicalNotes: contactForm.notes.value,
+      vocalNotes: contactForm.notes.value,
+      theoryNotes: contactForm.notes.value,
+
       submitdate: formattedDate,
       //   "g-recaptcha-response": grecaptcha.getResponse(),
     })
