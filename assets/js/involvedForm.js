@@ -76,7 +76,7 @@ function sendMail(contactForm) {
   } else {
     var practical = "";
   }
-  if (vocalCheck.checked == true) {
+  if (vocalCheck && vocalCheck.checked == true) {
     var vocal = contactForm.vocal.value;
   } else {
     var vocal = "";
