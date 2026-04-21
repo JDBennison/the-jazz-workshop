@@ -85,15 +85,8 @@
         <div class="row align-items-center">
 
             <div class="col-12 col-md-6 pb-5 ">
-                <p><strong>Please note that I am not running any courses at the moment. Enquiries are welcome for future courses or I may be able to point you in the direction of other local opportunities.</strong></p>
-                
-                <p>To put you in the right group and help you get the best experience, please fill out the enquiry form
-                    below. You may get
-                    a phone call to discuss course options too.</p>
-
-                <p>The groups are put together with careful consideration each term to ensure that the ensemble
-                    instrumentation and levels
-                    of each player fit together.</p>
+                <p>To put you in the right group and help you get the best experience, please fill out the enquiry form below. You may get a phone call to discuss course options too.</p>
+                <p>The groups are put together with careful consideration each term to ensure that the ensemble instrumentation and levels of each player fit together.</p>
 
             </div>
             <div class="col-12 col-md-6 pb-5">
@@ -151,10 +144,16 @@
                         </legend>
                         <div class="col-sm-9">
                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="beginner" id="beginner" value="Beginner">
+                                <label class="form-check-label" for="beginner">
+                                    Get into Jazz: Beginner series
+                                </label>
+                            </div>
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="practical" id="practical"
                                     value="Practical">
                                 <label class="form-check-label" for="practical">
-                                    Practical workshops (non-vocal)
+                                    Practical workshops: Intermediate series
                                 </label>
                             </div>
                             <!-- <div class="form-check">
@@ -167,14 +166,50 @@
                                 <input class="form-check-input" type="checkbox" name="theory" id="theory"
                                     value="Theory">
                                 <label class="form-check-label" for="theory">
-                                    Jazz theory 101 Crash Course
+                                    Jazz theory
                                 </label>
                             </div>
                         </div>
                     </fieldset>
+                    <div class="beginner">
+                        <div class="">
+                            <h3>Get into Jazz: Beginner series</h3>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="beginnerInstrument" class="col-sm-3 col-form-label">What instrument do you play?</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="beginnerInstrument" name="beginnerInstrument"
+                                    placeholder="Instrument">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="beginnerAbility" class="col-sm-3 col-form-label">How would you describe your
+                                general instrumental skills? (Taken any grades? Played in bands already?)</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="beginnerAbility" name="beginnerAbility" rows="3"
+                                    placeholder="Your answer"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <label for="beginnerImprovisation" class="col-sm-3 col-form-label">Have you played jazz
+                                before or done any improvisation?</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="beginnerImprovisation"
+                                    name="beginnerImprovisation" placeholder="Your answer">
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <label for="beginnerNotes" class="col-sm-3 col-form-label">Is there anything specific you'd
+                                like to get from these workshops?</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="beginnerNotes" name="beginnerNotes"
+                                    placeholder="Your answer">
+                            </div>
+                        </div>
+                    </div>
                     <div class="practical">
                         <div class="">
-                            <h3>Practical workshops (non-vocal)</h3>
+                            <h3>Practical workshops: Intermediate series</h3>
                         </div>
                         <div class="row mb-3">
                             <label for="instrument" class="col-sm-3 col-form-label">What instrument do you play?</label>
@@ -248,14 +283,13 @@
                     </div>
                     <div class="theory">
                         <div class="">
-                            <h3>Jazz theory 101</h3>
+                            <h3>Jazz theory</h3>
                         </div>
                         <div class="row mb-3">
                             <label for="theoryAbility" class="col-sm-3 col-form-label">How would you describe your
                                 musical theory
                                 knowledge?
-                                (Have you studied formally? Are you a classical musician
-                                looking to learn and play jazz? Are a bedroom rocker who wants to branch out?)</label>
+                                (Have you had any theory tuition or none at all? Do you play music of another genre but don’t know much about jazz harmony? Are you familiar with scales, modes or the circle of 5ths?)</label>
                             <div class="col-sm-9">
                                 <textarea class="form-control" id="theoryAbility" name="theoryAbility" rows="3"
                                     placeholder="Your answer"></textarea>
