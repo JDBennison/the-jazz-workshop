@@ -253,3 +253,103 @@ a {
     padding: 0;
 }
 
+/* Mailchimp subscribe form in footer */
+#mc_embed_signup {
+    width: 100%;
+}
+
+#mc_embed_signup form {
+    padding: 0;
+    margin: 0;
+}
+
+#mc_embed_signup_scroll {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#mc_embed_signup .mc-field-group {
+    margin: 0;
+    padding: 0;
+}
+
+#mc_embed_signup input.email {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    width: 220px;
+}
+
+#mc_embed_signup input.email::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#mc_embed_signup input.email:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#mc_embed_signup #mc-embedded-subscribe {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    padding: 6px 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+#mc_embed_signup #mc-embedded-subscribe:hover {
+    background: white;
+    color: #008080;
+}
+
+/* Success/error messages */
+#mc_embed_signup #mce-success-response {
+    color: white;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+#mc_embed_signup #mce-error-response {
+    color: #ffcccc;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+@media (max-width: 767px) {
+    #mc_embed_signup_scroll {
+        justify-content: center;
+    }
+
+    #mc_embed_signup input.email {
+        width: 180px;
+    }
+}
+
+#mce-responses {
+    width: 100%;
+    margin-top: 6px;
+    text-align: right;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: white;
+    font-size: 13px;
+}
+
+#mc_embed_signup #mce-error-response {
+    color: #ffcccc;
+    font-size: 13px;
+}
