@@ -1,6 +1,6 @@
 function SubscribeForm() {
   $.ajax({
-    url: "https://api.apispreadsheets.com/data/RaJJrCV0qOqRJWKV/",
+    url: "https://api.apispreadsheets.com/data/SvuPip8YiQAFxai8/",
     type: "post",
     data: $("#subscribe").serializeArray(),
     success: function () {
