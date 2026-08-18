@@ -74,7 +74,7 @@ theoryCheckbox.change(function () {
 function sendMail(contactForm) {
   function SubForm() {
     $.ajax({
-      url: "https://api.apispreadsheets.com/data/RrZjyFhOxHdzDKQ0/",
+      url: "https://script.google.com/macros/s/AKfycbyS8A_T56ePVignuiwWoxf7DIm2uCHHb5WMhOEezF6-9UyT7Ti1ATYlrDROdhPR1rCo/exec",
       type: "post",
       data: $("#get_involved").serializeArray(),
       success: function () {},
